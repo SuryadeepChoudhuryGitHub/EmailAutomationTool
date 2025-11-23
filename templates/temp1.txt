@@ -1,0 +1,7 @@
+
+Hi {name},
+
+This is a test email send using email automation tool.
+
+Regards,
+Your Email Bot
