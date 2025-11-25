@@ -54,3 +54,96 @@ pip install pandas openpyxl
 ```
 
 ### 2. Set Up Email Credentials
+```text
+EMAIL_ADDRESS = "your_email@gmail.com"
+EMAIL_PASSWORD = "your_app_password"
+SMTP_SERVER = "smtp.gmail.com"
+SMTP_PORT = 465
+```
+
+### 3. Prepare
+```text
+name,email
+Alice,alice@gmail.com
+Bob,bob@yahoo.com
+Charlie,charlie@hotmail.com
+```
+
+### 4. Create an Email Template
+```text
+Hello {name},
+This is a test email from the Python automation script.
+```
+
+## Running the Program
+```text
+python main.py
+```
+### The program will:
+- Load the template
+- Read each receiver from recipients.csv
+- Generate personalized emails
+- Send them through SMTP
+- Print “Sent to …” after each successful delivery
+- Save a detailed history in email_log.xlsx
+
+## How the system works
+The Mail Automation system follows these steps:
+### 1.Load template
+  Reads the text file containing placeholders like {name}.
+### 2.Load CSV recipients
+  Reads details like name and email.
+### 3.Personalize template
+  Replaces all placeholders with actual data.
+### 4.Send email
+  Uses SMTP_SSL to deliver the email securely.
+### 5.Log results
+  Writes the timestamp, recipient info, and status to email_log.xlsx.
+
+## Support Email Providers
+| Provider        | SMTP Server         | Port |
+| --------------- | ------------------- | ---- |
+| Gmail           | smtp.gmail.com      | 465  |
+| Yahoo           | smtp.mail.yahoo.com | 465  |
+| Outlook/Hotmail | smtp.office365.com  | 587  |
+| Zoho            | smtp.zoho.com       | 465  |
+
+## Common Error and Fixes
+### 1.Username and password not accepted
+Solution:
+- Use an App Password (not your normal Gmail password)
+- Ensure 2-Step Verification is enabled
+
+### 2. SMTP timed out
+- Check your internet connection
+- Check if your college/office WiFi blocks SMTP
+
+Try using mobile hotspot
+
+### 3. Placeholder errors
+- Make sure template placeholders ({name}) match CSV column names exactly.
+
+## Use Cases
+- Sending event announcements
+- College bulk updates
+- Welcome or onboarding emails
+- Newsletter distribution
+- Marketing campaigns
+- Customer communication
+
+## Future Enhancements
+  This project can be easily expanded with:
+- HTML-based emails
+- File attachments (PDF, certificates, invoices)
+- GUI dashboard (Tkinter or web-based)
+- Scheduling system for daily/weekly emails
+- Multiple templates & campaigns
+- Cloud deployment for full automation
+
+## Acknowledgments
+This project aims to help beginners understand:
+- How email automation works
+- How to use SMTP with Python
+- How CSV + templates create personalized communication
+- How logs can be stored in Excel for tracking
+- Feel free to tweak and experiment with the project to make it your own!
