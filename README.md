@@ -1,24 +1,22 @@
-# Email Automation Tool
+# 📧 Email Automation System (Python)
 
-This project is a simple email automation tool built in Python.  
-It can:
+The **Email Automation System** is a Python-based tool designed to send personalized emails to a list of recipients automatically.  
+It uses a text template for the email body, a CSV file for recipient data, and Python’s SMTP library to deliver messages.  
+Every email sent is also recorded in an Excel file, so you always have a full history of your communication.
 
-- Send emails in bulk using SMTP (e.g., Gmail)
-- Use a text template with placeholders like `{name}`
-- Read recipients from a CSV file
-- Log every sent/failed email into an Excel file (`email_log.xlsx`)
-
-Basically, it’s a polite little robot that sends emails for you.
+This project is perfect for students, small businesses, newsletters, schools, and anyone who needs to send bulk emails efficiently.
 
 ---
 
-## Features
+## ⭐ Features
 
-- **Bulk emailing**: Send the same email (with personalization) to multiple recipients.
-- **Templating**: Use `{name}`, `{email}`, etc. in a text template.
-- **CSV-based recipients**: Manage recipients easily using a spreadsheet-like CSV.
-- **Excel logging**: Every email (sent or failed) is recorded in `email_log.xlsx`.
-- **SMTP-based**: Works with Gmail or any other SMTP provider (with correct settings).
+- Send **bulk emails** automatically  
+- Use **placeholders** like `{name}` for personalization  
+- Read recipient details from a CSV file  
+- Store email delivery logs in an Excel sheet  
+- Fully configurable using a `config.py` file  
+- Works with Gmail, Yahoo, Outlook, Zoho, and more  
+- Simple, lightweight, and beginner-friendly project
 
 ---
 
@@ -33,3 +31,26 @@ config.py               # email and SMTP configuration
 recipients.csv          # list of recipients
 email_log.xlsx          # generated automatically (log of all emails)
 templates/welcome.txt   # email body template
+```
+
+### 📌 What each file does
+
+| File | Purpose |
+|------|---------|
+| `email_automation.py` | Reads template + CSV, sends emails, logs results |
+| `config.py` | Stores email address, app password, SMTP server info |
+| `recipients.csv` | Contains recipient names and email addresses |
+| `welcome.txt` | The email body (with placeholders) |
+| `email_log.xlsx` | Records all successful/failed emails |
+
+---
+
+## 🔧 Installation & Setup
+
+### 1. Install Required Python Libraries
+
+```bash
+pip install pandas openpyxl
+```
+
+### 2. Set Up Email Credentials
