@@ -1,4 +1,4 @@
-# 📧 Email Automation System (Python)
+# Email Automation System (Python)
 
 The **Email Automation System** is a Python-based tool designed to send personalized emails to a list of recipients automatically.  
 It uses a text template for the email body, a CSV file for recipient data, and Python’s SMTP library to deliver messages.  
@@ -8,7 +8,7 @@ This project is perfect for students, small businesses, newsletters, schools, an
 
 ---
 
-## ⭐ Features
+## Features
 
 - Send **bulk emails** automatically  
 - Use **placeholders** like `{name}` for personalization  
@@ -33,7 +33,7 @@ email_log.xlsx          # generated automatically (log of all emails)
 templates/welcome.txt   # email body template
 ```
 
-### 📌 What each file does
+### What each file does
 
 | File | Purpose |
 |------|---------|
@@ -45,7 +45,7 @@ templates/welcome.txt   # email body template
 
 ---
 
-## 🔧 Installation & Setup
+## Installation & Setup
 
 ### 1. Install Required Python Libraries
 
